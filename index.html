@@ -3,115 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Interactive Resume</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <!-- Particle Background -->
+    <div class="particles"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
     <div class="container">
         <!-- Header Section -->
-        <header class="header">
+        <header class="header parallax" data-speed="0.5">
             <div class="header-content">
-                <img src="https://www.matichon.co.th/wp-content/uploads/2022/04/eunwo.o_c_271388132_247650264175455_5428231214639355198_n.jpg" alt="Profile Picture" class="profile-image">
+                <img src="https://www.matichon.co.th/wp-content/uploads/2022/04/eunwo.o_c_271388132_247650264175455_5428231214639355198_n.jpg" 
+                     alt="Profile Picture" 
+                     class="profile-image floating">
                 <div class="header-text">
-                    <h1>TAI Developer</h1>
+                    <h1 class="typing-effect glowing-text">TAI Developer</h1>
                     <p class="title">Senior Full Stack Developer</p>
                     <div class="contact-info">
-                        <span><i class="fas fa-map-marker-alt"></i> New York, USA</span>
-                        <span><i class="fas fa-envelope"></i> weerapol.chansawang@ordis.ac.th</span>
-                        <span><i class="fas fa-phone"></i> 095-901-3482</span>
+                        <span class="ripple"><i class="fas fa-map-marker-alt"></i> New York, USA</span>
+                        <span class="ripple"><i class="fas fa-envelope"></i> weerapol.chansawang@ordis.ac.th</span>
+                        <span class="ripple"><i class="fas fa-phone"></i> 095-901-3482</span>
                     </div>
                 </div>
+            </div>
+            <div class="header-wave">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                </svg>
             </div>
         </header>
 
         <!-- About Section -->
-        <section class="section about">
-            <h2><i class="fas fa-user"></i> About Me</h2>
-            <p class="about-text">
-                Passionate and results-driven Full Stack Developer with 5+ years of experience in developing scalable web applications. Specialized in JavaScript technologies and modern frameworks. Proven track record of delivering high-quality solutions and leading development teams.
-            </p>
-            <div class="highlights">
-                <div class="highlight-item">
-                    <i class="fas fa-award"></i>
-                    <h3>5+ Years Experience</h3>
-                </div>
-                <div class="highlight-item">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>50+ Projects</h3>
-                </div>
-                <div class="highlight-item">
-                    <i class="fas fa-users"></i>
-                    <h3>30+ Clients</h3>
+        <section class="section about parallax" data-speed="0.3" data-collapsible="true">
+            <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+            <div class="section-content">
+                <p class="about-text typing-effect">
+                    Passionate and results-driven Full Stack Developer with 5+ years of experience in developing scalable web applications. Specialized in JavaScript technologies and modern frameworks. Proven track record of delivering high-quality solutions and leading development teams.
+                </p>
+                <div class="highlights">
+                    <div class="highlight-item floating">
+                        <i class="fas fa-award"></i>
+                        <h3 class="counter">5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="highlight-item floating" style="animation-delay: 0.2s">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3 class="counter">50+</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="highlight-item floating" style="animation-delay: 0.4s">
+                        <i class="fas fa-users"></i>
+                        <h3 class="counter">30+</h3>
+                        <p>Clients</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section class="section skills">
-            <h2><i class="fas fa-code"></i> Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-bars">
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>HTML5/CSS3</span>
-                                <span>95%</span>
+        <section class="section skills" data-collapsible="true">
+            <h2 class="section-title"><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="section-content">
+                <div class="skills-container">
+                    <div class="skills-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <div class="skill-name">
+                                    <span>HTML5/CSS3</span>
+                                    <span class="percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-per" style="width: 95%">
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-per" style="width: 95%"></div>
+                            <div class="skill">
+                                <div class="skill-name">
+                                    <span>JavaScript/ES6+</span>
+                                    <span class="percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-per" style="width: 90%">
+                                        
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>JavaScript/ES6+</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-per" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>React.js</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-per" style="width: 85%"></div>
+                            <div class="skill">
+                                <div class="skill-name">
+                                    <span>React.js</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-per" style="width: 85%">
+                                       
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="skills-category">
-                    <h3>Backend Development</h3>
-                    <div class="skill-bars">
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>Node.js</span>
-                                <span>88%</span>
+                    <div class="skills-category">
+                        <h3>Backend Development</h3>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <div class="skill-name">
+                                    <span>Node.js</span>
+                                    <span class="percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-per" style="width: 88%">
+                                        
+                                    </div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-per" style="width: 88%"></div>
+                            <div class="skill">
+                                <div class="skill-name">
+                                    <span>Express.js</span>
+                                    <span class="percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-per" style="width: 85%">
+                                        
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>Express.js</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-per" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">
-                                <span>MongoDB</span>
-                                <span>82%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-per" style="width: 82%"></div>
+                            <div class="skill">
+                                <div class="skill-name">
+                                    <span>MongoDB</span>
+                                    <span class="percentage">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-per" style="width: 82%">
+                                       
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,95 +152,146 @@
         </section>
 
         <!-- Experience Section -->
-        <section class="section experience">
-            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-            <div class="timeline">
-                <div class="experience-card">
-                    <h3>Senior Full Stack Developer</h3>
-                    <p class="company">Tech Solutions Inc.</p>
-                    <p class="period"><i class="far fa-calendar-alt"></i> 2020 - Present</p>
-                    <ul class="responsibilities">
-                        <li>Led development team of 5 engineers in creating enterprise web applications</li>
-                        <li>Implemented microservices architecture using Node.js and Docker</li>
-                        <li>Reduced application load time by 40% through optimization</li>
-                        <li>Mentored junior developers and conducted code reviews</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Docker</span>
+        <section class="section experience" data-collapsible="true">
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+            <div class="section-content">
+                <div class="timeline">
+                    <div class="experience-card">
+                        <div class="experience-card-inner">
+                            <div class="experience-card-front">
+                                <h3>Senior Full Stack Developer</h3>
+                                <p class="company">Tech Solutions Inc.</p>
+                                <p class="period"><i class="far fa-calendar-alt"></i> 2020 - Present</p>
+                                <ul class="responsibilities">
+                                    <li>Led development team of 5 engineers in creating enterprise web applications</li>
+                                    <li>Implemented microservices architecture using Node.js and Docker</li>
+                                    <li>Reduced application load time by 40% through optimization</li>
+                                    <li>Mentored junior developers and conducted code reviews</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag ripple">React</span>
+                                    <span class="tech-tag ripple">Node.js</span>
+                                    <span class="tech-tag ripple">MongoDB</span>
+                                    <span class="tech-tag ripple">Docker</span>
+                                </div>
+                            </div>
+                            <div class="experience-card-back">
+                                <h3>Key Achievements</h3>
+                                <ul>
+                                    <li>Increased team productivity by 35%</li>
+                                    <li>Successfully delivered 10+ major projects</li>
+                                    <li>Implemented CI/CD pipeline</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="experience-card">
-                    <h3>Frontend Developer</h3>
-                    <p class="company">Digital Innovations Co.</p>
-                    <p class="period"><i class="far fa-calendar-alt"></i> 2018 - 2020</p>
-                    <ul class="responsibilities">
-                        <li>Developed responsive web applications using React and Vue.js</li>
-                        <li>Collaborated with UX designers to implement pixel-perfect designs</li>
-                        <li>Integrated RESTful APIs and implemented state management</li>
-                    </ul>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">SASS</span>
-                        <span class="tech-tag">REST APIs</span>
+                    <div class="experience-card">
+                        <div class="experience-card-inner">
+                            <div class="experience-card-front">
+                                <h3>Frontend Developer</h3>
+                                <p class="company">Digital Innovations Co.</p>
+                                <p class="period"><i class="far fa-calendar-alt"></i> 2018 - 2020</p>
+                                <ul class="responsibilities">
+                                    <li>Developed responsive web applications using React and Vue.js</li>
+                                    <li>Collaborated with UX designers to implement pixel-perfect designs</li>
+                                    <li>Integrated RESTful APIs and implemented state management</li>
+                                </ul>
+                                <div class="tech-stack">
+                                    <span class="tech-tag ripple">Vue.js</span>
+                                    <span class="tech-tag ripple">SASS</span>
+                                    <span class="tech-tag ripple">REST APIs</span>
+                                </div>
+                            </div>
+                            <div class="experience-card-back">
+                                <h3>Key Achievements</h3>
+                                <ul>
+                                    <li>Improved website performance by 50%</li>
+                                    <li>Developed reusable component library</li>
+                                    <li>Led frontend architecture decisions</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Projects Section -->
-        <section class="section projects">
-            <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="https://cdn.prod.website-files.com/661dc153b706dbb6ca6be504/663b222726c7f9b37d3c6d05_react.png" alt="E-commerce Platform" class="project-image">
-                    <div class="project-content">
-                        <h3>E-commerce Platform</h3>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                        <p>A full-featured e-commerce platform with payment integration and inventory management.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn"><i class="fab fa-github"></i> View Code</a>
-                            <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
-                    </div>
+<section class="section projects" data-collapsible="true">
+    <h2 class="section-title">
+        <i class="fas fa-project-diagram"></i> Featured Projects
+        <span class="toggle-icon">▼</span>
+    </h2>
+    <div class="section-content">
+        <div class="projects-grid">
+    <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://media.licdn.com/dms/image/v2/C4E12AQFdVr18zUa17Q/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1624637761724?e=2147483647&v=beta&t=uOrqjZV7ZeSvE6euFcZVEuj-2yuec1FppjnE6IUYdzY" alt="E-commerce Platform">
                 </div>
-
-                <div class="project-card">
-                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240103164616/Vuejs-Tutorial.png" alt="Task Management App" class="project-image">
-                    <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Express</span>
-                            <span class="tag">PostgreSQL</span>
-                        </div>
-                        <p>A collaborative task management application with real-time updates.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn"><i class="fab fa-github"></i> View Code</a>
-                            <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        </div>
+                <div class="project-info">
+                    <h3>E-commerce Platform</h3>
+                    <div class="project-tags">
+                        <span class="achievement ripple">React</span>
+                        <span class="achievement ripple">Node.js</span>
+                        <span class="achievement ripple">MongoDB</span>
+                    </div>
+                    <p class="project-description">
+                        A full-featured e-commerce platform with payment integration and inventory management.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+    
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://img-c.udemycdn.com/course/750x422/5157066_66bb.jpg" alt="Task Management App">
+                </div>
+                <div class="project-info">
+                    <h3>Task Management App</h3>
+                    <div class="project-tags">
+                        <span class="achievement ripple">Vue.js</span>
+                        <span class="achievement ripple">Express</span>
+                        <span class="achievement ripple">PostgreSQL</span>
+                    </div>
+                    <p class="project-description">
+                        A collaborative task management application with real-time updates.
+                    </p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+</section>
 
         <!-- Education Section -->
-        <section class="section education">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="education-card">
-                <h3>Master of Computer Science</h3>
-                <p class="school">Stanford University</p>
-                <p class="period"><i class="far fa-calendar-alt"></i> 2016 - 2018</p>
-                <div class="achievements">
-                    <span class="achievement">GPA: 3.8/4.0</span>
-                    <span class="achievement">Dean's List</span>
+        <section class="section education" data-collapsible="true">
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="section-content">
+                <div class="education-card floating">
+                    <h3>Master of Computer Science</h3>
+                    <p class="school">Stanford University</p>
+                    <p class="period"><i class="far fa-calendar-alt"></i> 2016 - 2018</p>
+                    <div class="achievements">
+                        <span class="achievement ripple">GPA: 3.8/4.0</span>
+                        <span class="achievement ripple">Dean's List</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -217,18 +300,24 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="social-icons">
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon floating"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon floating" style="animation-delay: 0.2s"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon floating" style="animation-delay: 0.4s"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon floating" style="animation-delay: 0.6s"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>© 2023 TAI Developer. All rights reserved.</p>
+        <p>© 2024 TAI Developer. All rights reserved.</p>
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">
+    <button class="dark-mode-toggle ripple">
         <i class="fas fa-moon"></i>
     </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-button ripple">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
-</html>
 </html>
