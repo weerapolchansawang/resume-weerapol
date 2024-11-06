@@ -1,3 +1,5 @@
+
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -94,13 +96,13 @@
         var(--secondary-color), 
         var(--primary-color));
     background-size: 200% 100%;
-    animation: gradientMove 3s linear infinite;
+    /* animation: gradientMove 3s linear infinite; */
 }
 
-@keyframes gradientMove {
+/* @keyframes gradientMove {
     0% { background-position: 100% 0; }
     100% { background-position: -100% 0; }
-}
+} */
 
 /* Typing Effect */
 .typing-effect {
@@ -624,6 +626,40 @@ body {
     font-size: 0.9rem;
 }
 
+/* Scroll Progress Bar Styles */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    z-index: 1000;
+    transition: width 0.1s ease;
+    transform: translateZ(0); /* เพิ่มบรรทัดนี้ */
+    will-change: width; /* เพิ่มบรรทัดนี้ */
+}
+
+/* ป้องกันการกระโดดของหน้าเว็บ */
+html {
+    scroll-behavior: smooth;
+    overflow-y: scroll; /* เพิ่มบรรทัดนี้ */
+    scrollbar-width: thin; /* เพิ่มบรรทัดนี้ สำหรับ Firefox */
+}
+
+/* สำหรับ Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
 /* Footer */
 .footer {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -632,6 +668,17 @@ body {
     padding: 3rem 0;
     border-radius: 20px;
     margin-top: 3rem;
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box; /* เพิ่มบรรทัดนี้ */
+}
+
+/* Container for footer content */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .social-icons {
@@ -907,13 +954,6 @@ body {
     --shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: all 0.3s ease;
-}
 
 /* Container */
 .container {
@@ -1035,11 +1075,32 @@ body {
 }
 
 /* About Section */
-.about-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
+.about-text p {
+    margin-bottom: 1rem;
+    overflow-wrap: break-word; /* ป้องกันข้อความล้น */
+    word-wrap: break-word;
+  }
+
+@media (max-width: 768px) {
+    .header-text h1 {
+      font-size: 2rem; /* ลดขนาดตัวอักษรลง */
+    }
+    
+    .about-text {
+      font-size: 1rem;
+      white-space: normal; /* ให้ข้อความขึ้นบรรทัดใหม่ได้ */
+    }
+    
+    .contact-info {
+      flex-direction: column; /* จัดเรียงแนวตั้ง */
+      align-items: center;
+    }
+    
+    .contact-info span {
+      width: 100%; /* ให้ความกว้างเต็ม */
+      text-align: center;
+    }
+  }
 
 .highlights {
     display: grid;
@@ -1106,16 +1167,24 @@ body {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 10px;
     position: relative;
-    animation: fillBars 2s ease-out forwards;
+    /* animation: fillBars 2s ease-out forwards; */
     transition: width 0.5s ease;
 }
 
-@keyframes fillBars {
+/* @keyframes fillBars {
     from { width: 0; }
     to { width: 100%; }
-}
+} */
 
 /* Experience Section */
+
+.skill-bar {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -1283,8 +1352,9 @@ body {
     color: white;
     text-align: center;
     padding: 3rem 0;
-    border-radius: 20px;
+    border-radius: 5% px;
     margin-top: 3rem;
+    
 }
 
 .social-icons {

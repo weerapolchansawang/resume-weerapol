@@ -1,3 +1,5 @@
+
+
 // Collapsible Sections
 document.querySelectorAll('.section h2').forEach(header => {
     header.style.cursor = 'pointer';
@@ -10,13 +12,6 @@ document.querySelectorAll('.section h2').forEach(header => {
         // Toggle icon
         const icon = header.querySelector('.toggle-icon');
         icon.textContent = content.classList.contains('collapsed') ? '▼' : '▲';
-        
-        // Add animation
-        if (!content.classList.contains('collapsed')) {
-            content.style.maxHeight = content.scrollHeight + 'px';
-        } else {
-            content.style.maxHeight = '0';
-        }
     });
 });
 
@@ -239,6 +234,8 @@ const scrollToTop = () => {
         behavior: 'smooth'
     });
 };
+
+
 
 // Create scroll-to-top button dynamically
 const scrollTopButton = document.createElement('button');
