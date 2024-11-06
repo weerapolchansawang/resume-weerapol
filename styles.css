@@ -1035,3 +1035,49 @@ body::before {
 .hobby-card:hover::after {
     opacity: 1;
 }
+
+/* ปรับโครงสร้างหน้าเว็บ */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    flex: 1;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    max-width: 1400px;
+}
+
+/* แก้ไข Footer Styles */
+.footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin-top: auto; /* ทำให้ footer อยู่ด้านล่างเสมอ */
+    position: relative; /* เปลี่ยนจาก fixed เป็น relative */
+    bottom: 0;
+}
+
+/* ปรับ content wrapper */
+.content-wrapper {
+    min-height: calc(100vh - 60px); /* ลบความสูงของ footer */
+    padding-bottom: 2rem; /* เพิ่ม padding ด้านล่าง */
+}
+
+/* ปรับ responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+    
+    .content-wrapper {
+        min-height: calc(100vh - 120px); /* ปรับตามความสูงของ footer บน mobile */
+    }
+}
